@@ -83,15 +83,38 @@ func TestEndToEndDeploymentScenario(t *testing.T) {
 			t.Fatalf("Cannot ping 8.8.8.8: %v", err)
 		}
 
+		defer sshSession.Close()
+
+		// Создаем новую SSH-сессию для установки MySQL клиента
+		sshSession, err = sshConnection.NewSession()
+		if err != nil {
+			t.Fatalf("Cannot create SSH session for MySQL client installation: %v", err)
+		}
+		defer sshSession.Close()
+
+		// Установка MySQL клиента
+		installMySQLCommand := "sudo apt-get update && sudo apt-get install mysql-client -y"
+		err = sshSession.Run(installMySQLCommand)
+		if err != nil {
+			t.Fatalf("Failed to install MySQL client: %v", err)
+		}
+
+		// Создаем новую SSH-сессию для выполнения команды MySQL
+		sshSession, err = sshConnection.NewSession()
+		if err != nil {
+			t.Fatalf("Cannot create SSH session for MySQL: %v", err)
+		}
+		defer sshSession.Close()
+
 		// Получаем параметры для подключения к базе данных MySQL из вывода Terraform
 		dbUser := terraform.Output(t, terraformOptions, "db_user")
 		dbPassword := terraform.Output(t, terraformOptions, "db_password")
 		dbHost := terraform.OutputList(t, terraformOptions, "db_hosts")[0] // Используем первый хост
 		dbName := terraform.Output(t, terraformOptions, "db_name")
 
-		// Проверка подключения к базе данных MySQL
+		/// Команда для проверки подключения к MySQL
 		checkDbCommand := fmt.Sprintf("mysql -u%s -p%s -h%s -e 'SHOW DATABASES;' %s", dbUser, dbPassword, dbHost, dbName)
-		output, err := sshSession.CombinedOutput(checkDbCommand)
+		output, err := sshSession.CombinedOutput(checkDbCommand) // Используем CombinedOutput для получения stdout и stderr
 		if err != nil {
 			t.Fatalf("Failed to connect to MySQL database: %v, output: %s", err, output)
 		}

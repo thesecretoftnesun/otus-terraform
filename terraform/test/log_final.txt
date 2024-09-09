@@ -1,0 +1,993 @@
+=== RUN   TestEndToEndDeploymentScenario
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 test_structure.go:29: The 'SKIP_setup' environment variable is not set, so executing stage 'setup'.
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 save_test_data.go:196: Storing test data in ..\.test-data\TerraformOptions.json so it can be reused later
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 save_test_data.go:200: [WARNING] The named test data at path ..\.test-data\TerraformOptions.json is non-empty. Save operation will overwrite existing value with "&{ ../ map[yc_folder:b1gusdme9cdib5es78j4] [] [] false  map[] map[] map[] 0 0s false false false false <nil> false 0 <nil> 0   false}".
+.
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 save_test_data.go:212: Marshalled JSON: {"TerraformBinary":"","TerraformDir":"../","Vars":{"yc_folder":"b1gusdme9cdib5es78j4"},"VarFiles":null,"Targets":null,"Lock":false,"LockTimeout":"","EnvVars":null,"BackendConfig":null,"RetryableTerraformErrors":null,"MaxRetries":0,"TimeBetweenRetries":0,"Upgrade":false,"Reconfigure":false,"MigrateState":false,"NoColor":false,"SshAgent":null,"NoStderr":false,"OutputMaxLineSize":0,"Logger":null,"Parallelism":0,"PlanFilePath":"","PluginDir":"","SetVarsAfterVarFiles":false}
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 retry.go:91: terraform [init -upgrade=false]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 logger.go:66: Running command terraform with args [init -upgrade=false]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:43+03:00 logger.go:66: [0m[1mInitializing the backend...[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: [0m[1mInitializing provider plugins...[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: - Reusing previous version of yandex-cloud/yandex from the dependency lock file
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: - Using previously-installed yandex-cloud/yandex v0.124.0
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: [0m[32m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: You may now begin working with Terraform. Try running "terraform plan" to see
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: any changes that are required for your infrastructure. All Terraform commands
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: should now work.
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: If you ever set or change modules or backend configuration for Terraform,
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: rerun this command to reinitialize your working directory. If you forget, other
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: commands will detect it and remind you to do so if necessary.[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 retry.go:91: terraform [apply -input=false -auto-approve -var yc_folder=b1gusdme9cdib5es78j4 -lock=false]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:44+03:00 logger.go:66: Running command terraform with args [apply -input=false -auto-approve -var yc_folder=b1gusdme9cdib5es78j4 -lock=false]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m create[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: Terraform will perform the following actions:
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_compute_instance.wp-app-1[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_compute_instance" "wp-app-1" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id                 = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m fqdn                      = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m gpu_cluster_id            = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m hostname                  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id                        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m maintenance_grace_period  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m maintenance_policy        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m metadata                  = {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjFppsd2T2Y3pETJbGMbuArtxmskxSkXE8u7qkdOO+zYSc49RVIQUpDbN3E0GgjEXcQJ73j3UpFDgbYXGJyPoInCuPVYr2Vm6MqK2TX1D3UOpWl8KFDBbLJfrAdjEKlqUfBggfmqZXX5uHUxlRf1uYJq2QjDTDNW1rmWS4vsewhb7nlxiOTzEymnch9SdnZlF2mYws7r6Iaxf2GdsCfVPUPWTdCgx7R4MpfXkpnyBWEHI7ibeEdCB3YEGQuvamLSLQecblu3/88I1JzaPznSMCSYSDl8agB6LkqIg92ZGKkLeoTXBaPvgXiQMAXSWR/c6hQU+TD65bOpvY86oND9zciMhajDUTfhtTKJmX2QGCAjM/JVLPm4lBhqy7aYq1PalNlUCgrgEKxDcKOyiZh1SOGNIQtimTJS4E4rHqnnxYizAG8bdF3ZATYdVJJMgixx7Hk41uw+J24rPja1INTx2BKBUzKjSoR1iQg1g7l8nkqFfnE/mL3QOffHjh2TShrx+nurVSlUG2973dgLsE7ul/rIBSv+ZWJw7NFEJBsJ7e2Xs+UPhzQTnhhxswyqwN/hnYiaIwLtb5MliG+pKTxUAorY/fD+e4MoS7NfFiP9xAhh2p25qucxsGtSijCLs54EHQIEWjRrm2lcrvXIggrlr6lNkaka9MmZ8anEVGWpH0Xw== ubuntu@89.169.143.200
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name                      = "wp-app-1"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_acceleration_type = "standard"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m platform_id               = "standard-v1"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m service_account_id        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m status                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m zone                      = "ru-central1-a"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m boot_disk {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m auto_delete = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m device_name = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m disk_id     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m mode        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m initialize_params {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m block_size  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m description = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m image_id    = "fd80viupr3qjr5g6g9du"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m name        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m size        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m snapshot_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m type        = "network-hdd"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m metadata_options (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_interface {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m index              = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ip_address         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ipv4               = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ipv6               = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ipv6_address       = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m mac_address        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m nat                = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m nat_ip_address     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m nat_ip_version     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m security_group_ids = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m placement_policy (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m resources {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m core_fraction = 100
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m cores         = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m memory        = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m scheduling_policy (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_compute_instance.wp-app-2[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_compute_instance" "wp-app-2" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id                 = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m fqdn                      = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m gpu_cluster_id            = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m hostname                  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id                        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m maintenance_grace_period  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m maintenance_policy        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m metadata                  = {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjFppsd2T2Y3pETJbGMbuArtxmskxSkXE8u7qkdOO+zYSc49RVIQUpDbN3E0GgjEXcQJ73j3UpFDgbYXGJyPoInCuPVYr2Vm6MqK2TX1D3UOpWl8KFDBbLJfrAdjEKlqUfBggfmqZXX5uHUxlRf1uYJq2QjDTDNW1rmWS4vsewhb7nlxiOTzEymnch9SdnZlF2mYws7r6Iaxf2GdsCfVPUPWTdCgx7R4MpfXkpnyBWEHI7ibeEdCB3YEGQuvamLSLQecblu3/88I1JzaPznSMCSYSDl8agB6LkqIg92ZGKkLeoTXBaPvgXiQMAXSWR/c6hQU+TD65bOpvY86oND9zciMhajDUTfhtTKJmX2QGCAjM/JVLPm4lBhqy7aYq1PalNlUCgrgEKxDcKOyiZh1SOGNIQtimTJS4E4rHqnnxYizAG8bdF3ZATYdVJJMgixx7Hk41uw+J24rPja1INTx2BKBUzKjSoR1iQg1g7l8nkqFfnE/mL3QOffHjh2TShrx+nurVSlUG2973dgLsE7ul/rIBSv+ZWJw7NFEJBsJ7e2Xs+UPhzQTnhhxswyqwN/hnYiaIwLtb5MliG+pKTxUAorY/fD+e4MoS7NfFiP9xAhh2p25qucxsGtSijCLs54EHQIEWjRrm2lcrvXIggrlr6lNkaka9MmZ8anEVGWpH0Xw== ubuntu@89.169.143.200
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name                      = "wp-app-2"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_acceleration_type = "standard"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m platform_id               = "standard-v1"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m service_account_id        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m status                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m zone                      = "ru-central1-b"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m boot_disk {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m auto_delete = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m device_name = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m disk_id     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m mode        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m initialize_params {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m block_size  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m description = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m image_id    = "fd80viupr3qjr5g6g9du"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m name        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m size        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m snapshot_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m type        = "network-hdd"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m metadata_options (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_interface {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m index              = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ip_address         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ipv4               = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ipv6               = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m ipv6_address       = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m mac_address        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m nat                = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m nat_ip_address     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m nat_ip_version     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m security_group_ids = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m placement_policy (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m resources {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m core_fraction = 100
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m cores         = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m memory        = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m scheduling_policy (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_lb_network_load_balancer.wp_lb[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_lb_network_load_balancer" "wp_lb" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at          = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m deletion_protection = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id           = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id                  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name                = "wp-network-load-balancer"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m region_id           = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m type                = "external"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m attached_target_group {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m target_group_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m healthcheck {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m healthy_threshold   = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m interval            = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m name                = "http"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m timeout             = 1
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m unhealthy_threshold = 2
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m http_options {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:                   [32m+[0m[0m path = "/health"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:                   [32m+[0m[0m port = 80
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:                 }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m listener {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m name        = "wp-listener"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m port        = 80
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m protocol    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m target_port = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m external_address_spec {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m address    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m ip_version = "ipv4"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_lb_target_group.wp_tg[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_lb_target_group" "wp_tg" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name       = "wp-target-group"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m region_id  = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m target {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m address   = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m subnet_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m target {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m address   = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m subnet_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_mdb_mysql_cluster.wp_mysql[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m allow_regeneration_host   = false
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m backup_retain_period_days = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m deletion_protection       = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m environment               = "PRODUCTION"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id                 = "b1gusdme9cdib5es78j4"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m health                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m host_group_ids            = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id                        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m mysql_config              = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name                      = "wp-mysql"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_id                = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m status                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m version                   = "8.0"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m access (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m backup_window_start (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m host {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m assign_public_ip   = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m fqdn               = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m replication_source = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m zone               = "ru-central1-b"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m host {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m assign_public_ip   = true
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m fqdn               = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m replication_source = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m subnet_id          = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m zone               = "ru-central1-d"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m maintenance_window (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m performance_diagnostics (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m resources {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m disk_size          = 16
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m disk_type_id       = "network-ssd"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m resource_preset_id = "s2.micro"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_mdb_mysql_database.db[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_mdb_mysql_database" "db" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m cluster_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name       = "db"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_mdb_mysql_user.user[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_mdb_mysql_user" "user" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m authentication_plugin = "MYSQL_NATIVE_PASSWORD"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m cluster_id            = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m global_permissions    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name                  = "user"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m password              = (sensitive value)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m connection_limits (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m permission {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m database_name = "db"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m roles         = [
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:               [32m+[0m[0m "ALL",
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:             ]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_vpc_network.wp-network[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_vpc_network" "wp-network" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at                = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m default_security_group_id = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id                 = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id                        = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m labels                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name                      = "wp-network"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m subnet_ids                = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_vpc_subnet.wp-subnet-a[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_vpc_subnet" "wp-subnet-a" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id      = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id             = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m labels         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name           = "wp-subnet-a"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_id     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m "10.2.0.0/16",
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         ]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m v6_cidr_blocks = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m zone           = "ru-central1-a"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_vpc_subnet.wp-subnet-b[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_vpc_subnet" "wp-subnet-b" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id      = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id             = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m labels         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name           = "wp-subnet-b"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_id     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m "10.3.0.0/16",
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         ]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m v6_cidr_blocks = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m zone           = "ru-central1-b"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1m  # yandex_vpc_subnet.wp-subnet-d[0m will be created
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m  [32m+[0m[0m resource "yandex_vpc_subnet" "wp-subnet-d" {
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m created_at     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m folder_id      = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m id             = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m labels         = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m name           = "wp-subnet-d"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m network_id     = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:           [32m+[0m[0m "10.4.0.0/16",
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:         ]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m v6_cidr_blocks = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m zone           = "ru-central1-d"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [1mPlan:[0m 11 to add, 0 to change, 0 to destroy.
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: Changes to Outputs:
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m database_host_fqdn         = [
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m (known after apply),
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m (known after apply),
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     ]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m db_host                    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m db_hosts                   = [
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m (known after apply),
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:       [32m+[0m[0m (known after apply),
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:     ]
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m db_name                    = "db"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m db_password                = (sensitive value)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m db_user                    = "user"
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m load_balancer_public_ip    = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66:   [32m+[0m[0m vm_linux_public_ip_address = (known after apply)
+TestEndToEndDeploymentScenario 2024-09-09T14:02:45+03:00 logger.go:66: [0m[1myandex_vpc_network.wp-network: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:48+03:00 logger.go:66: [0m[1myandex_vpc_network.wp-network: Creation complete after 2s [id=enphbi0lhfntohds9k5d][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:48+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-a: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:48+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-d: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:48+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-b: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:48+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-a: Creation complete after 1s [id=e9b65s66ch9e0osvbqo4][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:48+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:49+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-d: Creation complete after 1s [id=fl8t942t1gi4fc4i714c][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:49+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-b: Creation complete after 2s [id=e2l7ndf1j2pjfqhvb099][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:49+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:58+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still creating... [10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:02:59+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still creating... [10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:08+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still creating... [20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:09+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still creating... [20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:18+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still creating... [30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:19+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still creating... [30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:28+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still creating... [40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:29+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still creating... [40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:35+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Creation complete after 47s [id=fhmleushfopnabcubiho][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:39+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still creating... [50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:41+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Creation complete after 51s [id=epd8475cs20ic1fj69ei][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:41+03:00 logger.go:66: [0m[1myandex_lb_target_group.wp_tg: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:42+03:00 logger.go:66: [0m[1myandex_lb_target_group.wp_tg: Creation complete after 2s [id=enp17bfu1mt2nvcgddo2][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:42+03:00 logger.go:66: [0m[1myandex_lb_network_load_balancer.wp_lb: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:45+03:00 logger.go:66: [0m[1myandex_lb_network_load_balancer.wp_lb: Creation complete after 3s [id=enpv80mai76h2lhe661h][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:03:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:04:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:04:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:04:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:04:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [1m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:04:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:04:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:05:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:05:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:05:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:05:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [2m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:05:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:05:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:06:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:06:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:06:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:06:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [3m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:06:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:06:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:07:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:07:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:07:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:07:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [4m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:07:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:07:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:08:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:08:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:08:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:08:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [5m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:08:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:08:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:09:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:09:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:09:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:09:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [6m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:09:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:09:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:10:09+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:10:19+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:10:29+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:10:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [7m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:10:49+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [8m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:10:59+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [8m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:11:10+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [8m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:11:20+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [8m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:11:30+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [8m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:11:40+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [8m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:11:50+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [9m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:12:00+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [9m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:12:10+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [9m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:12:20+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [9m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:12:30+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [9m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:12:40+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [9m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:12:50+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:13:00+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:13:10+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:13:20+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:13:30+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:13:40+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [10m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:13:50+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [11m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:14:00+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [11m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:14:10+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [11m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:14:20+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [11m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:14:30+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [11m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:14:40+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [11m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:14:50+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [12m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:15:00+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [12m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:15:10+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [12m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:15:20+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [12m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:15:30+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [12m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:15:40+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [12m50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:15:50+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [13m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:00+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [13m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:10+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still creating... [13m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Creation complete after 13m22s [id=c9quqv241gh7qu9l50nt][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Creating...[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:22+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Still creating... [10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:22+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Still creating... [10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:27+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Creation complete after 16s [id=c9quqv241gh7qu9l50nt:db][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:32+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Still creating... [20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:42+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Still creating... [30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Creation complete after 36s [id=c9quqv241gh7qu9l50nt:user][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: [0m[1m[32m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: [0m[0m[1m[32m
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: Outputs:
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: [0mdatabase_host_fqdn = tolist([
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66:   "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66:   "rc1d-kxnzj551t9t6lsec.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: ])
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: db_host = "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net"
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: db_hosts = tolist([
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66:   "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66:   "rc1d-kxnzj551t9t6lsec.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: ])
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: db_name = "db"
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: db_password = <sensitive>
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: db_user = "user"
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: load_balancer_public_ip = "84.201.151.6"
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: vm_linux_public_ip_address = "89.169.153.250"
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 test_structure.go:29: The 'SKIP_validate' environment variable is not set, so executing stage 'validate'.
+Run some tests...
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 save_test_data.go:228: Loading test data from ..\.test-data\TerraformOptions.json
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 retry.go:91: terraform [output -no-color -json load_balancer_public_ip]
+TestEndToEndDeploymentScenario 2024-09-09T14:16:47+03:00 logger.go:66: Running command terraform with args [output -no-color -json load_balancer_public_ip]
+TestEndToEndDeploymentScenario 2024-09-09T14:16:48+03:00 logger.go:66: "84.201.151.6"
+TestEndToEndDeploymentScenario 2024-09-09T14:16:48+03:00 retry.go:91: terraform [output -no-color -json vm_linux_public_ip_address]
+TestEndToEndDeploymentScenario 2024-09-09T14:16:48+03:00 logger.go:66: Running command terraform with args [output -no-color -json vm_linux_public_ip_address]
+TestEndToEndDeploymentScenario 2024-09-09T14:16:48+03:00 logger.go:66: "89.169.153.250"
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 retry.go:91: terraform [output -no-color -json db_user]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: Running command terraform with args [output -no-color -json db_user]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: "user"
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 retry.go:91: terraform [output -no-color -json db_password]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: Running command terraform with args [output -no-color -json db_password]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: "password"
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 retry.go:91: terraform [output -no-color -json db_hosts]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: Running command terraform with args [output -no-color -json db_hosts]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: ["rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net","rc1d-kxnzj551t9t6lsec.mdb.yandexcloud.net"]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 retry.go:91: terraform [output -no-color -json db_name]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:09+03:00 logger.go:66: Running command terraform with args [output -no-color -json db_name]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:10+03:00 logger.go:66: "db"
+MySQL database connection test successful, output:
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Database
+db
+information_schema
+performance_schema
+
+TestEndToEndDeploymentScenario 2024-09-09T14:17:10+03:00 test_structure.go:29: The 'SKIP_teardown' environment variable is not set, so executing stage 'teardown'.
+TestEndToEndDeploymentScenario 2024-09-09T14:17:10+03:00 save_test_data.go:228: Loading test data from ..\.test-data\TerraformOptions.json
+TestEndToEndDeploymentScenario 2024-09-09T14:17:10+03:00 retry.go:91: terraform [destroy -auto-approve -input=false -var yc_folder=b1gusdme9cdib5es78j4 -lock=false]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:10+03:00 logger.go:66: Running command terraform with args [destroy -auto-approve -input=false -var yc_folder=b1gusdme9cdib5es78j4 -lock=false]
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_vpc_network.wp-network: Refreshing state... [id=enphbi0lhfntohds9k5d][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-d: Refreshing state... [id=fl8t942t1gi4fc4i714c][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-a: Refreshing state... [id=e9b65s66ch9e0osvbqo4][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-b: Refreshing state... [id=e2l7ndf1j2pjfqhvb099][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Refreshing state... [id=c9quqv241gh7qu9l50nt][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Refreshing state... [id=fhmleushfopnabcubiho][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:11+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Refreshing state... [id=epd8475cs20ic1fj69ei][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_lb_target_group.wp_tg: Refreshing state... [id=enp17bfu1mt2nvcgddo2][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Refreshing state... [id=c9quqv241gh7qu9l50nt:db][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Refreshing state... [id=c9quqv241gh7qu9l50nt:user][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_lb_network_load_balancer.wp_lb: Refreshing state... [id=enpv80mai76h2lhe661h][0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m destroy[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: Terraform will perform the following actions:
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_compute_instance.wp-app-1[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_compute_instance" "wp-app-1" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at                = "2024-09-09T11:02:49Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id                 = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m fqdn                      = "fhmleushfopnabcubiho.auto.internal" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id                        = "fhmleushfopnabcubiho" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m metadata                  = {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjFppsd2T2Y3pETJbGMbuArtxmskxSkXE8u7qkdOO+zYSc49RVIQUpDbN3E0GgjEXcQJ73j3UpFDgbYXGJyPoInCuPVYr2Vm6MqK2TX1D3UOpWl8KFDBbLJfrAdjEKlqUfBggfmqZXX5uHUxlRf1uYJq2QjDTDNW1rmWS4vsewhb7nlxiOTzEymnch9SdnZlF2mYws7r6Iaxf2GdsCfVPUPWTdCgx7R4MpfXkpnyBWEHI7ibeEdCB3YEGQuvamLSLQecblu3/88I1JzaPznSMCSYSDl8agB6LkqIg92ZGKkLeoTXBaPvgXiQMAXSWR/c6hQU+TD65bOpvY86oND9zciMhajDUTfhtTKJmX2QGCAjM/JVLPm4lBhqy7aYq1PalNlUCgrgEKxDcKOyiZh1SOGNIQtimTJS4E4rHqnnxYizAG8bdF3ZATYdVJJMgixx7Hk41uw+J24rPja1INTx2BKBUzKjSoR1iQg1g7l8nkqFfnE/mL3QOffHjh2TShrx+nurVSlUG2973dgLsE7ul/rIBSv+ZWJw7NFEJBsJ7e2Xs+UPhzQTnhhxswyqwN/hnYiaIwLtb5MliG+pKTxUAorY/fD+e4MoS7NfFiP9xAhh2p25qucxsGtSijCLs54EHQIEWjRrm2lcrvXIggrlr6lNkaka9MmZ8anEVGWpH0Xw== ubuntu@89.169.143.200
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         } [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name                      = "wp-app-1" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_acceleration_type = "standard" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m platform_id               = "standard-v1" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m status                    = "running" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m zone                      = "ru-central1-a" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (5 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m boot_disk {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m auto_delete = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m device_name = "fhm5hsph63qgalp52929" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m disk_id     = "fhm5hsph63qgalp52929" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m mode        = "READ_WRITE" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m initialize_params {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m block_size  = 4096 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m image_id    = "fd80viupr3qjr5g6g9du" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 name        = [90mnull[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m size        = 3 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m type        = "network-hdd" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m metadata_options {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m aws_v1_http_endpoint = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m aws_v1_http_token    = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m gce_http_endpoint    = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m gce_http_token       = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_interface {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m index              = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m ip_address         = "10.2.0.13" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m ipv4               = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m ipv6               = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m mac_address        = "d0:0d:15:77:b9:17" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m nat                = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m nat_ip_address     = "89.169.153.250" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m nat_ip_version     = "IPV4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m security_group_ids = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m subnet_id          = "e9b65s66ch9e0osvbqo4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m placement_policy {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m host_affinity_rules       = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m placement_group_partition = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m resources {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m core_fraction = 100 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m cores         = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m gpus          = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m memory        = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m scheduling_policy {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m preemptible = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_compute_instance.wp-app-2[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_compute_instance" "wp-app-2" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at                = "2024-09-09T11:02:50Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id                 = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m fqdn                      = "epd8475cs20ic1fj69ei.auto.internal" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id                        = "epd8475cs20ic1fj69ei" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m metadata                  = {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "ssh-keys" = <<-EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjFppsd2T2Y3pETJbGMbuArtxmskxSkXE8u7qkdOO+zYSc49RVIQUpDbN3E0GgjEXcQJ73j3UpFDgbYXGJyPoInCuPVYr2Vm6MqK2TX1D3UOpWl8KFDBbLJfrAdjEKlqUfBggfmqZXX5uHUxlRf1uYJq2QjDTDNW1rmWS4vsewhb7nlxiOTzEymnch9SdnZlF2mYws7r6Iaxf2GdsCfVPUPWTdCgx7R4MpfXkpnyBWEHI7ibeEdCB3YEGQuvamLSLQecblu3/88I1JzaPznSMCSYSDl8agB6LkqIg92ZGKkLeoTXBaPvgXiQMAXSWR/c6hQU+TD65bOpvY86oND9zciMhajDUTfhtTKJmX2QGCAjM/JVLPm4lBhqy7aYq1PalNlUCgrgEKxDcKOyiZh1SOGNIQtimTJS4E4rHqnnxYizAG8bdF3ZATYdVJJMgixx7Hk41uw+J24rPja1INTx2BKBUzKjSoR1iQg1g7l8nkqFfnE/mL3QOffHjh2TShrx+nurVSlUG2973dgLsE7ul/rIBSv+ZWJw7NFEJBsJ7e2Xs+UPhzQTnhhxswyqwN/hnYiaIwLtb5MliG+pKTxUAorY/fD+e4MoS7NfFiP9xAhh2p25qucxsGtSijCLs54EHQIEWjRrm2lcrvXIggrlr6lNkaka9MmZ8anEVGWpH0Xw== ubuntu@89.169.143.200
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             EOT
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         } [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name                      = "wp-app-2" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_acceleration_type = "standard" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m platform_id               = "standard-v1" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m status                    = "running" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m zone                      = "ru-central1-b" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (5 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m boot_disk {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m auto_delete = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m device_name = "epdka46lhldlf9iig76l" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m disk_id     = "epdka46lhldlf9iig76l" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m mode        = "READ_WRITE" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m initialize_params {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m block_size  = 4096 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m image_id    = "fd80viupr3qjr5g6g9du" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 name        = [90mnull[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m size        = 3 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m type        = "network-hdd" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m metadata_options {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m aws_v1_http_endpoint = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m aws_v1_http_token    = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m gce_http_endpoint    = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m gce_http_token       = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_interface {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m index              = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m ip_address         = "10.3.0.17" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m ipv4               = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m ipv6               = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m mac_address        = "d0:0d:82:1c:ac:e0" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m nat                = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m nat_ip_address     = "158.160.26.140" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m nat_ip_version     = "IPV4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m security_group_ids = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m subnet_id          = "e2l7ndf1j2pjfqhvb099" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m placement_policy {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m host_affinity_rules       = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m placement_group_partition = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m resources {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m core_fraction = 100 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m cores         = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m gpus          = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m memory        = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m scheduling_policy {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m preemptible = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_lb_network_load_balancer.wp_lb[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_lb_network_load_balancer" "wp_lb" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at          = "2024-09-09T11:03:42Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m deletion_protection = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id           = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id                  = "enpv80mai76h2lhe661h" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels              = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name                = "wp-network-load-balancer" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m region_id           = "ru-central1" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m type                = "external" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m attached_target_group {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m target_group_id = "enp17bfu1mt2nvcgddo2" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m healthcheck {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m healthy_threshold   = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m interval            = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m name                = "http" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m timeout             = 1 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m unhealthy_threshold = 2 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m http_options {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                   [31m-[0m[0m path = "/health" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                   [31m-[0m[0m port = 80 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:                 }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m listener {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m name        = "wp-listener" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m port        = 80 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m protocol    = "tcp" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m target_port = 80 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m external_address_spec {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m address    = "84.201.151.6" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m ip_version = "ipv4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_lb_target_group.wp_tg[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_lb_target_group" "wp_tg" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at  = "2024-09-09T11:03:41Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id   = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id          = "enp17bfu1mt2nvcgddo2" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels      = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name        = "wp-target-group" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m region_id   = "ru-central1" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m target {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m address   = "10.2.0.13" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m subnet_id = "e9b65s66ch9e0osvbqo4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m target {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m address   = "10.3.0.17" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m subnet_id = "e2l7ndf1j2pjfqhvb099" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_mdb_mysql_cluster.wp_mysql[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_mdb_mysql_cluster" "wp_mysql" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m allow_regeneration_host   = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m backup_retain_period_days = 7 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at                = "2024-09-09T11:02:49Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m deletion_protection       = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m environment               = "PRODUCTION" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id                 = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m health                    = "HEALTH_UNKNOWN" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m host_group_ids            = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id                        = "c9quqv241gh7qu9l50nt" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m mysql_config              = {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "binlog_transaction_dependency_tracking" = "0"
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "log_slow_rate_type"                     = "0"
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "sql_mode"                               = "ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         } [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name                      = "wp-mysql" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_id                = "enphbi0lhfntohds9k5d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m security_group_ids        = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m status                    = "RUNNING" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m version                   = "8.0" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m access {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m data_lens     = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m data_transfer = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m web_sql       = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m backup_window_start {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m hours   = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m minutes = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m host {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m assign_public_ip        = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m backup_priority         = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m fqdn                    = "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             name                    = [90mnull[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m priority                = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m subnet_id               = "e2l7ndf1j2pjfqhvb099" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m zone                    = "ru-central1-b" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m host {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m assign_public_ip        = true [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m backup_priority         = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m fqdn                    = "rc1d-kxnzj551t9t6lsec.mdb.yandexcloud.net" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             name                    = [90mnull[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m priority                = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m subnet_id               = "fl8t942t1gi4fc4i714c" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m zone                    = "ru-central1-d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m maintenance_window {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m hour = 0 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m type = "ANYTIME" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m performance_diagnostics {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m enabled                      = false [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m sessions_sampling_interval   = 60 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m statements_sampling_interval = 600 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m resources {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m disk_size          = 16 [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m disk_type_id       = "network-ssd" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m resource_preset_id = "s2.micro" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_mdb_mysql_database.db[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_mdb_mysql_database" "db" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m cluster_id = "c9quqv241gh7qu9l50nt" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id         = "c9quqv241gh7qu9l50nt:db" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name       = "db" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_mdb_mysql_user.user[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_mdb_mysql_user" "user" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m authentication_plugin = "MYSQL_NATIVE_PASSWORD" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m cluster_id            = "c9quqv241gh7qu9l50nt" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m global_permissions    = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id                    = "c9quqv241gh7qu9l50nt:user" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name                  = "user" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m password              = (sensitive value) [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m permission {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m database_name = "db" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m roles         = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:               [31m-[0m[0m "ALL",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:             ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_vpc_network.wp-network[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_vpc_network" "wp-network" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at                = "2024-09-09T11:02:46Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m default_security_group_id = "enp09fkbq03k8tfienno" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id                 = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id                        = "enphbi0lhfntohds9k5d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name                      = "wp-network" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m subnet_ids                = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "e2l7ndf1j2pjfqhvb099",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "e9b65s66ch9e0osvbqo4",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "fl8t942t1gi4fc4i714c",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (1 unchanged attribute hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_vpc_subnet.wp-subnet-a[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_vpc_subnet" "wp-subnet-a" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at     = "2024-09-09T11:02:48Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id      = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id             = "e9b65s66ch9e0osvbqo4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels         = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name           = "wp-subnet-a" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_id     = "enphbi0lhfntohds9k5d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "10.2.0.0/16",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m v6_cidr_blocks = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m zone           = "ru-central1-a" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_vpc_subnet.wp-subnet-b[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_vpc_subnet" "wp-subnet-b" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at     = "2024-09-09T11:02:49Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id      = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id             = "e2l7ndf1j2pjfqhvb099" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels         = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name           = "wp-subnet-b" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_id     = "enphbi0lhfntohds9k5d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "10.3.0.0/16",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m v6_cidr_blocks = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m zone           = "ru-central1-b" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1m  # yandex_vpc_subnet.wp-subnet-d[0m will be [1m[31mdestroyed[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m  [31m-[0m[0m resource "yandex_vpc_subnet" "wp-subnet-d" {
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m created_at     = "2024-09-09T11:02:49Z" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m folder_id      = "b1gusdme9cdib5es78j4" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m id             = "fl8t942t1gi4fc4i714c" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m labels         = {} [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m name           = "wp-subnet-d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m network_id     = "enphbi0lhfntohds9k5d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m v4_cidr_blocks = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:           [31m-[0m[0m "10.4.0.0/16",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m v6_cidr_blocks = [] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m zone           = "ru-central1-d" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:         [90m# (2 unchanged attributes hidden)[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     }
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: 
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [1mPlan:[0m 0 to add, 0 to change, 11 to destroy.
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: Changes to Outputs:
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m database_host_fqdn         = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m "rc1d-kxnzj551t9t6lsec.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m db_host                    = "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m db_hosts                   = [
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m "rc1b-9vz9ood0eqr15ojp.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:       [31m-[0m[0m "rc1d-kxnzj551t9t6lsec.mdb.yandexcloud.net",
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:     ] [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m db_name                    = "db" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m db_password                = (sensitive value) [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m db_user                    = "user" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m load_balancer_public_ip    = "84.201.151.6" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66:   [31m-[0m[0m vm_linux_public_ip_address = "89.169.153.250" [90m-> null[0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Destroying... [id=c9quqv241gh7qu9l50nt:db][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Destroying... [id=c9quqv241gh7qu9l50nt:user][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:12+03:00 logger.go:66: [0m[1myandex_lb_network_load_balancer.wp_lb: Destroying... [id=enpv80mai76h2lhe661h][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:15+03:00 logger.go:66: [0m[1myandex_lb_network_load_balancer.wp_lb: Destruction complete after 3s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:15+03:00 logger.go:66: [0m[1myandex_lb_target_group.wp_tg: Destroying... [id=enp17bfu1mt2nvcgddo2][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:17+03:00 logger.go:66: [0m[1myandex_lb_target_group.wp_tg: Destruction complete after 1s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:17+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Destroying... [id=epd8475cs20ic1fj69ei][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:17+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Destroying... [id=fhmleushfopnabcubiho][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:22+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Still destroying... [id=c9quqv241gh7qu9l50nt:user, 10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:22+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Still destroying... [id=c9quqv241gh7qu9l50nt:db, 10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:27+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still destroying... [id=epd8475cs20ic1fj69ei, 10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:27+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still destroying... [id=fhmleushfopnabcubiho, 10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:31+03:00 logger.go:66: [0m[1myandex_mdb_mysql_database.db: Destruction complete after 19s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:32+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Still destroying... [id=c9quqv241gh7qu9l50nt:user, 20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:37+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still destroying... [id=epd8475cs20ic1fj69ei, 20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:37+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still destroying... [id=fhmleushfopnabcubiho, 20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:42+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Still destroying... [id=c9quqv241gh7qu9l50nt:user, 30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:47+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still destroying... [id=epd8475cs20ic1fj69ei, 30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:47+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still destroying... [id=fhmleushfopnabcubiho, 30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:52+03:00 logger.go:66: [0m[1myandex_mdb_mysql_user.user: Destruction complete after 39s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:52+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Destroying... [id=c9quqv241gh7qu9l50nt][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:57+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Still destroying... [id=epd8475cs20ic1fj69ei, 40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:17:57+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still destroying... [id=fhmleushfopnabcubiho, 40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:02+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:06+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-2: Destruction complete after 49s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:07+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Still destroying... [id=fhmleushfopnabcubiho, 50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:09+03:00 logger.go:66: [0m[1myandex_compute_instance.wp-app-1: Destruction complete after 52s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:09+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-a: Destroying... [id=e9b65s66ch9e0osvbqo4][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:13+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-a: Destruction complete after 5s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:22+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:32+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:42+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 50s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:18:52+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 1m0s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:02+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 1m10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:12+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 1m20s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:22+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 1m30s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:32+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Still destroying... [id=c9quqv241gh7qu9l50nt, 1m40s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:39+03:00 logger.go:66: [0m[1myandex_mdb_mysql_cluster.wp_mysql: Destruction complete after 1m48s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:39+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-d: Destroying... [id=fl8t942t1gi4fc4i714c][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:39+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-b: Destroying... [id=e2l7ndf1j2pjfqhvb099][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:42+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-d: Destruction complete after 2s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:49+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-b: Still destroying... [id=e2l7ndf1j2pjfqhvb099, 10s elapsed][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:51+03:00 logger.go:66: [0m[1myandex_vpc_subnet.wp-subnet-b: Destruction complete after 11s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:51+03:00 logger.go:66: [0m[1myandex_vpc_network.wp-network: Destroying... [id=enphbi0lhfntohds9k5d][0m[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:52+03:00 logger.go:66: [0m[1myandex_vpc_network.wp-network: Destruction complete after 1s[0m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:52+03:00 logger.go:66: [0m[1m[32m
+TestEndToEndDeploymentScenario 2024-09-09T14:19:52+03:00 logger.go:66: Destroy complete! Resources: 11 destroyed.
+TestEndToEndDeploymentScenario 2024-09-09T14:19:52+03:00 logger.go:66: [0m
+--- PASS: TestEndToEndDeploymentScenario (1028.40s)
+PASS
+ok  	test/terraform/test	1028.709s

@@ -21,6 +21,7 @@ resource "yandex_compute_instance" "wp-app-1" {
 
   metadata = {
     ssh-keys = "ubuntu:${file("C:/Users/minia/.ssh/id_rsa.pub")}"
+    ssh-keys = "ubuntu:${file("/Users/alsumingaleeva/.ssh/id_ed25519.pub")}"
   }
 }
 
@@ -47,5 +48,6 @@ resource "yandex_compute_instance" "wp-app-2" {
 
   metadata = {
     ssh-keys = "ubuntu:${file("C:/Users/minia/.ssh/id_rsa.pub")}"
+    ssh-keys = "ubuntu:${file("/Users/alsumingaleeva/.ssh/id_ed25519.pub")}"
   }
 }

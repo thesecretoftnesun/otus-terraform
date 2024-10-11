@@ -57,6 +57,7 @@
       service:
         name: apache2
         state: reloaded
+
     - name: Install mysql cert
       copy:
         src: ../files/root.crt

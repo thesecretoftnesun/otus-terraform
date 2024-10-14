@@ -1,8 +1,0 @@
-#!/usr/bin/env python3
-plugin: community.general.terraform
-# Путь к файлу terraform.tfstate
-file: /mnt/c/Users/minia/Documents/Обучение/IaC/ДЗ/Terraform/Репозиторий/otus-terraform/terraform/terraform.tfstate
-keyed_groups:
-  - key: tags
-hostnames:
-  - attribute: public_ip

@@ -45,3 +45,4 @@ resource "yandex_mdb_mysql_user" "user" {
       roles         = ["ALL"]
     }
 }
+

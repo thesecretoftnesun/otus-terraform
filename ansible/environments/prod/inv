@@ -1,0 +1,3 @@
+[wp_app]
+app ansible_host=158.160.20.115
+app2 ansible_host=89.169.151.100

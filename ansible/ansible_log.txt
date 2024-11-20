@@ -1,0 +1,59 @@
+
+PLAY [wp_app] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Update apt-get repo and cache] *******************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : install dependencies] ****************************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Create the installation directory] ***************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Install WordPress] *******************************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Copy file with owner and permissions] ************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Enable URL rewriting] ****************************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Enable the site] *********************************************
+changed: [app2]
+changed: [app]
+
+TASK [wordpress : Disable the default “It Works” site] *************************
+changed: [app2]
+changed: [app]
+
+TASK [wordpress : Reload service apache2] **************************************
+changed: [app2]
+changed: [app]
+
+TASK [wordpress : Install mysql cert] ******************************************
+ok: [app2]
+ok: [app]
+
+TASK [wordpress : Update cert index] *******************************************
+changed: [app2]
+changed: [app]
+
+TASK [wordpress : Configure WordPress] *****************************************
+ok: [app2]
+ok: [app]
+
+PLAY RECAP *********************************************************************
+app                        : ok=13   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+app2                       : ok=13   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
